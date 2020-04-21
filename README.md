@@ -1,7 +1,9 @@
 # WeiBo-SwiftUI 微博App项目实战
 
+- 仓库代码：[appke/WeiBo-SwiftUI: SwiftUI 实现微博项目](https://github.com/appke/WeiBo-SwiftUI)
+
 - [x] 创建 Xcode project (项目、工程)
-- [ ] 显示用户头像、昵称等内容
+- [x] 显示用户头像、昵称等内容
 - [ ] 动态显示微博数据信息
 - [ ] 显示更多微博数据信息
   显示微博列表
