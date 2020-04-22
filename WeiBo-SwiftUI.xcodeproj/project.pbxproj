@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B02D02A244F16E200827F2F /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B02D029244F16E200827F2F /* PostCell.swift */; };
+		3B02D02C244FF13000827F2F /* PostVIPBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B02D02B244FF13000827F2F /* PostVIPBadge.swift */; };
 		3BFA17A6244CE52A00A10B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA17A5244CE52A00A10B20 /* AppDelegate.swift */; };
 		3BFA17A8244CE52A00A10B20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA17A7244CE52A00A10B20 /* SceneDelegate.swift */; };
 		3BFA17AA244CE52A00A10B20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA17A9244CE52A00A10B20 /* ContentView.swift */; };
@@ -101,6 +102,7 @@
 
 /* Begin PBXFileReference section */
 		3B02D029244F16E200827F2F /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		3B02D02B244FF13000827F2F /* PostVIPBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVIPBadge.swift; sourceTree = "<group>"; };
 		3BFA17A2244CE52A00A10B20 /* WeiBo-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeiBo-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BFA17A5244CE52A00A10B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BFA17A7244CE52A00A10B20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				3BFA17A7244CE52A00A10B20 /* SceneDelegate.swift */,
 				3BFA17A9244CE52A00A10B20 /* ContentView.swift */,
 				3B02D029244F16E200827F2F /* PostCell.swift */,
+				3B02D02B244FF13000827F2F /* PostVIPBadge.swift */,
 				3BFA17AB244CE52F00A10B20 /* Assets.xcassets */,
 				3BFA17B0244CE52F00A10B20 /* LaunchScreen.storyboard */,
 				3BFA17B3244CE52F00A10B20 /* Info.plist */,
@@ -493,6 +496,7 @@
 				3BFA17A8244CE52A00A10B20 /* SceneDelegate.swift in Sources */,
 				3BFA17AA244CE52A00A10B20 /* ContentView.swift in Sources */,
 				3B02D02A244F16E200827F2F /* PostCell.swift in Sources */,
+				3B02D02C244FF13000827F2F /* PostVIPBadge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
