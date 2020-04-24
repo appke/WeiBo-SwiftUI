@@ -25,13 +25,42 @@ import SwiftUI
  },
  */
 
+let postList = _loadPostListData("PostListData_hot_1.json")
+
+fileprivate func _loadPostListData(_ fileName: String) -> PostList {
+    guard let url = Bundle.main.url(forResource: fileName, withExtension: nil) else {
+        fatalError("Can't find \(fileName) in main bundle")
+    }
+    
+    guard let data = try? Data(contentsOf: url) else {
+        fatalError("Can't load \(url)")
+    }
+    
+    guard let list = try? JSONDecoder().decode(PostList.self, from: data) else {
+        fatalError("Can't parse post list json data")
+    }
+    return list
+}
+
+struct PostList: Codable {
+    let list: [Post]
+}
+
 // Data Model
-struct Post {
+struct Post: Codable {
+    let id: Int
     let avatar: String
     let vip: Bool
     let name: String
     let date: String
+    
     var isFollowed: Bool
     
+    let text: String
+    let images: [String]
+    
+    let commentCount: Int
+    let likeCount: Int
+    let isLiked: Bool
 }
 

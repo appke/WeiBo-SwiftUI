@@ -59,10 +59,12 @@ struct PostCell: View {
 
 struct PostCell_Previews: PreviewProvider {
     static var previews: some View {
-        PostCell(post: Post(avatar: "d0c21786ly1gavj2c0kcej20c8096dh7.jpg",
-                            vip: true,
-                            name: "用户昵称",
-                            date: "2020-04-24",
-                            isFollowed: false))
+//        PostCell(post: Post(avatar: "8a0b5544jw1e8qgp5bmzyj2050050aa8.jpg",
+//                            vip: true,
+//                            name: "用户昵称",
+//                            date: "2020-04-24",
+//                            isFollowed: false))
+        
+        PostCell(post: postList.list[2])
     }
 }
