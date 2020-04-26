@@ -14,7 +14,7 @@ struct PostCell: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
-                Image(uiImage: UIImage(named: post.avatar)!)
+                post.avaterImage
                     .resizable()
                     .scaledToFill()
                     .frame(width: 50, height: 50)
@@ -58,10 +58,10 @@ struct PostCell: View {
                 .font(.system(size: 17))
             
             if !post.images.isEmpty {
-                Image(uiImage: UIImage(named: post.images[0])!)
+                loadImage(name: post.images[0])
                 .resizable()
                 .scaledToFill()
-                    .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.width * 0.75) //4:3
+                    .frame(width: UIScreen.main.bounds.size.width - 30, height: (UIScreen.main.bounds.size.width - 30) * 0.75) //4:3
                 .clipped()
             }
             
@@ -82,8 +82,15 @@ struct PostCell: View {
                 
                 Spacer()
             }
+            
+            // cell之间分割线
+            Rectangle()
+                .padding(.horizontal, -15)
+                .frame(height: 10)
+                .foregroundColor(Color(red: 238/255.0, green: 238/255.0, blue: 238/255.0))
         }
-        
+        .padding(.horizontal, 15)
+        .padding(.top, 15)
         
     }
 }

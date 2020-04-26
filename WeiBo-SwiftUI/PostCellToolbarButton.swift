@@ -22,7 +22,7 @@ struct PostCellToolbarButton: View {
                     .scaledToFit()
                     .frame(width: 18, height: 18)
                 Text(text)
-                    .font(.system(size: 17))
+                    .font(.system(size: 15))
 
             }
             .foregroundColor(color)
@@ -34,7 +34,7 @@ struct PostCellToolbarButton: View {
 struct PostCellToolbarButton_Previews: PreviewProvider {
     static var previews: some View {
         PostCellToolbarButton(image: "heart",
-                              text: "评论",
+                              text: "点赞",
                               color: .orange) {
                                 print("Click --- ")
         }
