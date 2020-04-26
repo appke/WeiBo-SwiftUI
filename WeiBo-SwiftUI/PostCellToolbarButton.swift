@@ -23,11 +23,10 @@ struct PostCellToolbarButton: View {
                     .frame(width: 18, height: 18)
                 Text(text)
                     .font(.system(size: 15))
-
             }
-            .foregroundColor(color)
-            
         }
+        .foregroundColor(color)
+        .buttonStyle(BorderlessButtonStyle())
     }
 }
 

@@ -51,6 +51,7 @@ struct PostCell: View {
                                 .stroke(Color.orange, lineWidth: 1)
                         )
                     }
+                    .buttonStyle(BorderlessButtonStyle())
                 }
             }
             

@@ -9,6 +9,11 @@
 import SwiftUI
 
 struct PostListView: View {
+    init() {
+        UITableView.appearance().separatorStyle = .none
+        UITableViewCell.appearance().selectionStyle = .none
+    }
+    
     var body: some View {
         
         List {
