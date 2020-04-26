@@ -18,7 +18,9 @@ struct PostListView: View {
         
         List {
             ForEach(postList.list) { post in
-                PostCell(post: post)
+                NavigationLink(destination: Text("Detail")) {
+                    PostCell(post: post)
+                }
                 .listRowInsets(EdgeInsets())
             }
         }
@@ -34,6 +36,11 @@ struct PostListView: View {
 
 struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
-        PostListView()
+        NavigationView {
+            PostListView()
+            .navigationBarTitle("微博")
+            .navigationBarHidden(true)
+        }
+        
     }
 }
