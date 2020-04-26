@@ -61,7 +61,7 @@ struct PostImageCellRow: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: (self.width - kImageSpace * CGFloat(self.images.count - 1)) / CGFloat(self.images.count),
-                          height: (self.width - kImageSpace * CGFloat(self.images.count - 1)) / CGFloat(self.images.count))
+                           height: (self.width - kImageSpace * CGFloat(self.images.count - 1)) / CGFloat(self.images.count))
                     .clipped()
             }
         }
