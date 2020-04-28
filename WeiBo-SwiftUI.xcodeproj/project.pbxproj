@@ -15,6 +15,7 @@
 		3B4EA56A245567E70011973E /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4EA569245567E70011973E /* PostImageCell.swift */; };
 		3B4EA56C24557EB30011973E /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4EA56B24557EB30011973E /* PostDetailView.swift */; };
 		3B9CDDD0245813ED00D6E521 /* HomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CDDCF245813ED00D6E521 /* HomeNavigationBar.swift */; };
+		3BD1445224582416005B4919 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1445124582416005B4919 /* HomeView.swift */; };
 		3BFA17A6244CE52A00A10B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA17A5244CE52A00A10B20 /* AppDelegate.swift */; };
 		3BFA17A8244CE52A00A10B20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA17A7244CE52A00A10B20 /* SceneDelegate.swift */; };
 		3BFA17AA244CE52A00A10B20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA17A9244CE52A00A10B20 /* ContentView.swift */; };
@@ -115,6 +116,7 @@
 		3B4EA569245567E70011973E /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
 		3B4EA56B24557EB30011973E /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 		3B9CDDCF245813ED00D6E521 /* HomeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationBar.swift; sourceTree = "<group>"; };
+		3BD1445124582416005B4919 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3BFA17A2244CE52A00A10B20 /* WeiBo-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeiBo-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BFA17A5244CE52A00A10B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BFA17A7244CE52A00A10B20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				3BFA17A5244CE52A00A10B20 /* AppDelegate.swift */,
 				3BFA17A7244CE52A00A10B20 /* SceneDelegate.swift */,
 				3BFA17A9244CE52A00A10B20 /* ContentView.swift */,
+				3BD1445124582416005B4919 /* HomeView.swift */,
 				3B4EA5672452F0380011973E /* PostListView.swift */,
 				3B9CDDCF245813ED00D6E521 /* HomeNavigationBar.swift */,
 				3B02D029244F16E200827F2F /* PostCell.swift */,
@@ -270,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				3BFA17F5244CEA9700A10B20 /* PostListData_hot_1.json */,
+				3BFA17D2244CEA9700A10B20 /* PostListData_recommend_1.json */,
 				3BFA17BA244CEA9700A10B20 /* 8697cf1ely8gashxj3b09j20u00u040v.jpg */,
 				3BFA17BB244CEA9700A10B20 /* d0c21786ly1gavj2c0kcej20c8096dh7.jpg */,
 				3BFA17BC244CEA9700A10B20 /* 6ec3b446jw1e8qgp5bmzyj2050050aa8.jpg */,
@@ -294,7 +298,6 @@
 				3BFA17CF244CEA9700A10B20 /* 76297935ly1gatz89dzblj23402c0qv6.jpg */,
 				3BFA17D0244CEA9700A10B20 /* 700a34f6gy1gaunswy5qnj20j60pkadk.jpg */,
 				3BFA17D1244CEA9700A10B20 /* bca7fdafgw1ekhkps65b1j2050050dg4.jpg */,
-				3BFA17D2244CEA9700A10B20 /* PostListData_recommend_1.json */,
 				3BFA17D3244CEA9700A10B20 /* 006gWxMEly8g0bjpl3ynij30kv0kv773.jpg */,
 				3BFA17D4244CEA9700A10B20 /* 6ec3b446gy1gavd51jc4lj20j60pmwhl.jpg */,
 				3BFA17D5244CEA9700A10B20 /* 006gWxMEly1gavap88gttj30hs0a0dgf.jpg */,
@@ -519,6 +522,7 @@
 				3B02D02E2450206700827F2F /* Post.swift in Sources */,
 				3B9CDDD0245813ED00D6E521 /* HomeNavigationBar.swift in Sources */,
 				3B02D02A244F16E200827F2F /* PostCell.swift in Sources */,
+				3BD1445224582416005B4919 /* HomeView.swift in Sources */,
 				3B4EA56A245567E70011973E /* PostImageCell.swift in Sources */,
 				3B02D02C244FF13000827F2F /* PostVIPBadge.swift in Sources */,
 			);

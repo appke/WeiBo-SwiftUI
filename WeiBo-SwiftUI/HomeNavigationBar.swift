@@ -38,6 +38,7 @@ struct HomeNavigationBar: View {
                                 .bold()
                                 .frame(width: kLabelWidth, height: kButtonHeight)
                                 .padding(.top, 5)
+                                .opacity(1 - Double(leftPercent) * 0.5)
                                 .onTapGesture {
                                     withAnimation {
                                         self.leftPercent = 0
@@ -50,6 +51,7 @@ struct HomeNavigationBar: View {
                                 .bold()
                                 .frame(width: kLabelWidth, height: kButtonHeight)
                                 .padding(.top, 5)
+                                .opacity(0.5 + Double(leftPercent) * 0.5)
                                 .onTapGesture {
                                     withAnimation {
                                         self.leftPercent = 1
@@ -88,6 +90,7 @@ struct HomeNavigationBar: View {
                     .foregroundColor(.orange)
             }
         }
+        .frame(width: UIScreen.main.bounds.width)
     }
 }
 

@@ -12,7 +12,7 @@ struct PostDetailView: View {
     let post: Post
     
     var body: some View {
-        List() {
+        List {
             PostCell(post: post)
                 .listRowInsets(EdgeInsets())
             
