@@ -16,14 +16,27 @@ struct HomeView: View {
         
     var body: some View {
         NavigationView {
-            ScrollView(.horizontal, showsIndicators: true) {
-                HStack(spacing: 0) {
-                    PostListView(category: .recommend)
-                        .frame(width: UIScreen.main.bounds.width)
-                    PostListView(category: .hot)
-                        .frame(width: UIScreen.main.bounds.width)
+            
+            GeometryReader { geometry in
+                HScrollViewController(pageWidth: geometry.size.width,
+                                      contentSize: CGSize(width: geometry.size.width * 2, height: geometry.size.height)
+                ) {
+                    HStack(spacing: 0) {
+                        PostListView(category: .recommend)
+                            .frame(width: UIScreen.main.bounds.width)
+                        PostListView(category: .hot)
+                            .frame(width: UIScreen.main.bounds.width)
+                    }
                 }
             }
+            //            ScrollView(.horizontal, showsIndicators: true) {
+//                HStack(spacing: 0) {
+//                    PostListView(category: .recommend)
+//                        .frame(width: UIScreen.main.bounds.width)
+//                    PostListView(category: .hot)
+//                        .frame(width: UIScreen.main.bounds.width)
+//                }
+//            }
             .edgesIgnoringSafeArea(.bottom)
             .navigationBarItems(leading: HomeNavigationBar(leftPercent: 0))
             .navigationBarTitle("首页", displayMode: .inline)
