@@ -14,6 +14,7 @@
 		3B4EA5682452F0380011973E /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4EA5672452F0380011973E /* PostListView.swift */; };
 		3B4EA56A245567E70011973E /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4EA569245567E70011973E /* PostImageCell.swift */; };
 		3B4EA56C24557EB30011973E /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4EA56B24557EB30011973E /* PostDetailView.swift */; };
+		3B9CDDD0245813ED00D6E521 /* HomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CDDCF245813ED00D6E521 /* HomeNavigationBar.swift */; };
 		3BFA17A6244CE52A00A10B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA17A5244CE52A00A10B20 /* AppDelegate.swift */; };
 		3BFA17A8244CE52A00A10B20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA17A7244CE52A00A10B20 /* SceneDelegate.swift */; };
 		3BFA17AA244CE52A00A10B20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA17A9244CE52A00A10B20 /* ContentView.swift */; };
@@ -113,6 +114,7 @@
 		3B4EA5672452F0380011973E /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		3B4EA569245567E70011973E /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
 		3B4EA56B24557EB30011973E /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
+		3B9CDDCF245813ED00D6E521 /* HomeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationBar.swift; sourceTree = "<group>"; };
 		3BFA17A2244CE52A00A10B20 /* WeiBo-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeiBo-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BFA17A5244CE52A00A10B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BFA17A7244CE52A00A10B20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				3BFA17A7244CE52A00A10B20 /* SceneDelegate.swift */,
 				3BFA17A9244CE52A00A10B20 /* ContentView.swift */,
 				3B4EA5672452F0380011973E /* PostListView.swift */,
+				3B9CDDCF245813ED00D6E521 /* HomeNavigationBar.swift */,
 				3B02D029244F16E200827F2F /* PostCell.swift */,
 				3B4EA56B24557EB30011973E /* PostDetailView.swift */,
 				3B02D02B244FF13000827F2F /* PostVIPBadge.swift */,
@@ -514,6 +517,7 @@
 				3BFA17AA244CE52A00A10B20 /* ContentView.swift in Sources */,
 				3B4EA5662452E6060011973E /* PostCellToolbarButton.swift in Sources */,
 				3B02D02E2450206700827F2F /* Post.swift in Sources */,
+				3B9CDDD0245813ED00D6E521 /* HomeNavigationBar.swift in Sources */,
 				3B02D02A244F16E200827F2F /* PostCell.swift in Sources */,
 				3B4EA56A245567E70011973E /* PostImageCell.swift in Sources */,
 				3B02D02C244FF13000827F2F /* PostVIPBadge.swift in Sources */,
