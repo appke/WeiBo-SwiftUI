@@ -8,9 +8,9 @@
 
 import SwiftUI
 
-let postList = _loadPostListData("PostListData_hot_1.json")
+let postList = loadPostListData("PostListData_hot_1.json")
 
-fileprivate func _loadPostListData(_ fileName: String) -> PostList {
+func loadPostListData(_ fileName: String) -> PostList {
     guard let url = Bundle.main.url(forResource: fileName, withExtension: nil) else {
         fatalError("Can't find \(fileName) in main bundle")
     }

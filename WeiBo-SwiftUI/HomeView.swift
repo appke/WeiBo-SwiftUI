@@ -9,16 +9,22 @@
 import SwiftUI
 
 struct HomeView: View {
+    init() {
+        UITableView.appearance().separatorStyle = .none
+        UITableViewCell.appearance().selectionStyle = .none
+    }
+        
     var body: some View {
         NavigationView {
             ScrollView(.horizontal, showsIndicators: true) {
                 HStack(spacing: 0) {
-                    PostListView()
+                    PostListView(category: .recommend)
                         .frame(width: UIScreen.main.bounds.width)
-                    PostListView()
+                    PostListView(category: .hot)
                         .frame(width: UIScreen.main.bounds.width)
                 }
             }
+            .edgesIgnoringSafeArea(.bottom)
             .navigationBarItems(leading: HomeNavigationBar(leftPercent: 0))
             .navigationBarTitle("首页", displayMode: .inline)
         }

@@ -9,10 +9,22 @@
 import SwiftUI
 
 struct PostListView: View {
-    init() {
-        UITableView.appearance().separatorStyle = .none
-        UITableViewCell.appearance().selectionStyle = .none
+    
+    let category: PostListCategory
+    
+    var postList: PostList {
+        switch category {
+        case .recommend:
+            return loadPostListData("PostListData_recommend_1.json")
+        case .hot:
+            return loadPostListData("PostListData_hot_1.json")
+        }
     }
+    
+//    init() { //放到首页，以生成就设置，初始化方法没有category属性
+//        UITableView.appearance().separatorStyle = .none
+//        UITableViewCell.appearance().selectionStyle = .none
+//    }
     
     var body: some View {
         
@@ -41,7 +53,7 @@ struct PostListView: View {
 struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            PostListView()
+            PostListView(category: .recommend)
                 .navigationBarTitle("微博")
                 .navigationBarHidden(true)
         }
