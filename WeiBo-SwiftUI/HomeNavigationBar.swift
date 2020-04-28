@@ -12,7 +12,7 @@ private let kLabelWidth: CGFloat = 60
 private let kButtonHeight: CGFloat = 24
 
 struct HomeNavigationBar: View {
-    var leftPercent: CGFloat //0-left, 1-right
+    @State var leftPercent: CGFloat //0-left, 1-right
     
     var body: some View {
         
@@ -38,6 +38,11 @@ struct HomeNavigationBar: View {
                                 .bold()
                                 .frame(width: kLabelWidth, height: kButtonHeight)
                                 .padding(.top, 5)
+                                .onTapGesture {
+                                    withAnimation {
+                                        self.leftPercent = 0
+                                    }
+                            }
                             
                             Spacer()
                             
@@ -45,6 +50,12 @@ struct HomeNavigationBar: View {
                                 .bold()
                                 .frame(width: kLabelWidth, height: kButtonHeight)
                                 .padding(.top, 5)
+                                .onTapGesture {
+                                    withAnimation {
+                                        self.leftPercent = 1
+                                    }
+                                    
+                            }
 
                         }
                         // 下划线
