@@ -9,10 +9,16 @@
 import SwiftUI
 
 struct PostCell: View {
-    let post: Post
+    let post: Post //外部传进来的
+    
+    var bindingPost: Post {
+        userData.post(forId: post.id)!
+    }
+    @EnvironmentObject var userData: UserData
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        var post = bindingPost //局部变量，点赞要更新
+        return VStack(alignment: .leading, spacing: 10) {
             HStack {
                 post.avaterImage
                     .resizable()
@@ -40,7 +46,9 @@ struct PostCell: View {
                 
                 if !post.isFollowed { //没有关注，显示关注按钮
                     Button(action: {
-                        print("--- Click 关注")
+                        //print("--- Click 关注")
+                        post.isFollowed = true
+                        self.userData.update(post)
                     }) {
                         Text("关注")
                         .font(.system(size: 16))
@@ -67,14 +75,28 @@ struct PostCell: View {
             HStack {
                 Spacer()
                 
-                PostCellToolbarButton(image: "message", text: post.commentCountText, color: .black) {
+                PostCellToolbarButton(image: "message",
+                                      text: post.commentCountText,
+                                      color: .black)
+                {
                     print("message Click")
                 }
                 
                 Spacer()
                 
-                PostCellToolbarButton(image: "heart", text: post.likeCountText, color: .black) {
-                    print("like Click")
+                PostCellToolbarButton(image: post.isLiked ? "heart.fill" : "heart",
+                                      text: post.likeCountText,
+                                      color: post.isLiked ? .red : .black)
+                {
+                    //print("like Click")
+                    if post.isLiked {
+                        post.isLiked = false
+                        post.likeCount -= 1
+                    } else {
+                        post.isLiked = true
+                        post.likeCount += 1
+                    }
+                    self.userData.update(post)
                 }
                 
                 Spacer()

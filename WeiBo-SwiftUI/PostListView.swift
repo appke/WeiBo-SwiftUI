@@ -11,15 +11,17 @@ import SwiftUI
 struct PostListView: View {
     
     let category: PostListCategory
+    @EnvironmentObject var userData: UserData
     
-    var postList: PostList {
-        switch category {
-        case .recommend:
-            return loadPostListData("PostListData_recommend_1.json")
-        case .hot:
-            return loadPostListData("PostListData_hot_1.json")
-        }
-    }
+//    var postList: PostList {
+//        switch category {
+//        case .recommend:
+//            return loadPostListData("PostListData_recommend_1.json")
+//        case .hot:
+//            return loadPostListData("PostListData_hot_1.json")
+//        }
+//    }
+    
     
 //    init() { //放到首页，以生成就设置，初始化方法没有category属性
 //        UITableView.appearance().separatorStyle = .none
@@ -29,7 +31,7 @@ struct PostListView: View {
     var body: some View {
         
         List {
-            ForEach(postList.list) { post in
+            ForEach(userData.postList(for: category).list) { post in
                 ZStack {
                     PostCell(post: post)
                     NavigationLink(destination: PostDetailView(post: post)) {
@@ -55,7 +57,7 @@ struct PostListView_Previews: PreviewProvider {
         NavigationView {
             PostListView(category: .recommend)
                 .navigationBarTitle("微博")
-                .navigationBarHidden(true)
+                .navigationBarHidden(true).environmentObject(UserData())
         }
         
     }

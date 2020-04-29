@@ -26,7 +26,7 @@ func loadPostListData(_ fileName: String) -> PostList {
 }
 
 struct PostList: Codable {
-    let list: [Post]
+    var list: [Post]
 }
 
 // Data Model 最基本属性
@@ -44,7 +44,7 @@ struct Post: Codable, Identifiable {
     
     var commentCount: Int
     var likeCount: Int
-    let isLiked: Bool
+    var isLiked: Bool
     
     // let testa: String
 }

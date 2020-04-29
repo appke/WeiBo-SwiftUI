@@ -20,7 +20,6 @@
 		3BD14458245831A4005B4919 /* HScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD14457245831A4005B4919 /* HScrollViewController.swift */; };
 		3BFA17A6244CE52A00A10B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA17A5244CE52A00A10B20 /* AppDelegate.swift */; };
 		3BFA17A8244CE52A00A10B20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA17A7244CE52A00A10B20 /* SceneDelegate.swift */; };
-		3BFA17AA244CE52A00A10B20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFA17A9244CE52A00A10B20 /* ContentView.swift */; };
 		3BFA17AC244CE52F00A10B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BFA17AB244CE52F00A10B20 /* Assets.xcassets */; };
 		3BFA17AF244CE52F00A10B20 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BFA17AE244CE52F00A10B20 /* Preview Assets.xcassets */; };
 		3BFA17B2244CE52F00A10B20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BFA17B0244CE52F00A10B20 /* LaunchScreen.storyboard */; };
@@ -124,7 +123,6 @@
 		3BFA17A2244CE52A00A10B20 /* WeiBo-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeiBo-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BFA17A5244CE52A00A10B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BFA17A7244CE52A00A10B20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3BFA17A9244CE52A00A10B20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3BFA17AB244CE52F00A10B20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BFA17AE244CE52F00A10B20 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3BFA17B1244CE52F00A10B20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -246,7 +244,6 @@
 			children = (
 				3BFA17A5244CE52A00A10B20 /* AppDelegate.swift */,
 				3BFA17A7244CE52A00A10B20 /* SceneDelegate.swift */,
-				3BFA17A9244CE52A00A10B20 /* ContentView.swift */,
 				3BD1445124582416005B4919 /* HomeView.swift */,
 				3B9CDDCF245813ED00D6E521 /* HomeNavigationBar.swift */,
 				3BD14457245831A4005B4919 /* HScrollViewController.swift */,
@@ -525,7 +522,6 @@
 				3B4EA56C24557EB30011973E /* PostDetailView.swift in Sources */,
 				3BFA17A8244CE52A00A10B20 /* SceneDelegate.swift in Sources */,
 				3B4EA5682452F0380011973E /* PostListView.swift in Sources */,
-				3BFA17AA244CE52A00A10B20 /* ContentView.swift in Sources */,
 				3B4EA5662452E6060011973E /* PostCellToolbarButton.swift in Sources */,
 				3B02D02E2450206700827F2F /* Post.swift in Sources */,
 				3B9CDDD0245813ED00D6E521 /* HomeNavigationBar.swift in Sources */,
