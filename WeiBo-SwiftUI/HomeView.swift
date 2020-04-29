@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var leftPercent: CGFloat = 0
+    
     init() {
         UITableView.appearance().separatorStyle = .none
         UITableViewCell.appearance().selectionStyle = .none
@@ -16,10 +18,10 @@ struct HomeView: View {
         
     var body: some View {
         NavigationView {
-            
             GeometryReader { geometry in
                 HScrollViewController(pageWidth: geometry.size.width,
-                                      contentSize: CGSize(width: geometry.size.width * 2, height: geometry.size.height)
+                                      contentSize: CGSize(width: geometry.size.width * 2, height: geometry.size.height),
+                                      leftPercent: self.$leftPercent
                 ) {
                     HStack(spacing: 0) {
                         PostListView(category: .recommend)
@@ -38,7 +40,7 @@ struct HomeView: View {
 //                }
 //            }
             .edgesIgnoringSafeArea(.bottom)
-            .navigationBarItems(leading: HomeNavigationBar(leftPercent: 0))
+            .navigationBarItems(leading: HomeNavigationBar(leftPercent: $leftPercent))
             .navigationBarTitle("首页", displayMode: .inline)
         }
     }

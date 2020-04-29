@@ -12,11 +12,12 @@ struct HScrollViewController<Content: View>: UIViewControllerRepresentable {
     let pageWidth: CGFloat
     let contentSize: CGSize
     let content: Content //scrollView上的东西
-    @State var leftPercent: CGFloat = 0
+    @Binding var leftPercent: CGFloat
     
-    init(pageWidth: CGFloat, contentSize: CGSize, @ViewBuilder content: () -> Content) {
+    init(pageWidth: CGFloat, contentSize: CGSize, leftPercent: Binding<CGFloat>,  @ViewBuilder content: () -> Content) {
         self.pageWidth = pageWidth
         self.contentSize = contentSize
+        self._leftPercent = leftPercent
         self.content = content()
     }
     
@@ -70,7 +71,11 @@ struct HScrollViewController<Content: View>: UIViewControllerRepresentable {
         }
         
         func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-            print("--- End")
+            // 更新绑定值，拖拽之后，改变view
+            withAnimation {
+                parent.leftPercent = scrollView.contentOffset.x < parent.pageWidth * 0.5 ? 0 : 1
+            }
+            // print("--- End")
         }
     }
 }
