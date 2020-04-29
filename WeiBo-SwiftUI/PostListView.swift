@@ -57,7 +57,8 @@ struct PostListView_Previews: PreviewProvider {
         NavigationView {
             PostListView(category: .recommend)
                 .navigationBarTitle("微博")
-                .navigationBarHidden(true).environmentObject(UserData())
+                .navigationBarHidden(true)
+                .environmentObject(UserData())
         }
         
     }

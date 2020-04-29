@@ -122,6 +122,6 @@ struct PostCell_Previews: PreviewProvider {
 //                            date: "2020-04-24",
 //                            isFollowed: false))
         
-        PostCell(post: postList.list[3])
+        PostCell(post: UserData().hotPostList.list[3]).environmentObject(UserData())
     }
 }

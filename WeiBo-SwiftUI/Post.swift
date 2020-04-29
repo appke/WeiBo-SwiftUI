@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-let postList = loadPostListData("PostListData_hot_1.json")
+//let postList = loadPostListData("PostListData_hot_1.json")
 
 func loadPostListData(_ fileName: String) -> PostList {
     guard let url = Bundle.main.url(forResource: fileName, withExtension: nil) else {

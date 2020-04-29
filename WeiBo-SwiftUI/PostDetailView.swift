@@ -28,6 +28,6 @@ struct PostDetailView: View {
 
 struct PostDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PostDetailView(post: postList.list[0])
+        PostDetailView(post: UserData().hotPostList.list[2]).environmentObject(UserData())
     }
 }
