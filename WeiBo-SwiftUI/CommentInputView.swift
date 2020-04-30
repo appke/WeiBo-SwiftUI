@@ -11,36 +11,46 @@ import SwiftUI
 struct CommentInputView: View {
     let post: Post
     
+    @State private var text: String = ""
+    
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var userData: UserData
     
     var body: some View {
-        HStack {
-            Button(action: {
-                //print("Cancel")
-                self.presentationMode.wrappedValue.dismiss()
-            }) {
-                Text("取消").padding()
+        
+        VStack(spacing: 0) {
+            CommentTextView(text: $text)
+            
+            HStack {
+                    Button(action: {
+                        //print("Cancel")
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text("取消").padding()
+                    }
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        //print("Send")
+                        print(self.text)
+                        
+                        // 修改评论数
+                        var post = self.post
+                        post.commentCount += 1
+                        self.userData.update(post)
+                        
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text("发送").padding()
+                    }
+                    
+                }
+                .font(.system(size: 18))
+                .foregroundColor(.black)
             }
-            
-            Spacer()
-            
-            Button(action: {
-                //print("Send")
-                // 修改评论数
-                var post = self.post
-                post.commentCount += 1
-                self.userData.update(post)
-                
-                self.presentationMode.wrappedValue.dismiss()
-            }) {
-                Text("发送").padding()
-            }
-            
         }
-        .font(.system(size: 18))
-        .foregroundColor(.black)
-    }
+        
 }
 
 struct CommentInputView_Previews: PreviewProvider {

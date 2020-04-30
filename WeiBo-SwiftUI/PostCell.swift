@@ -85,7 +85,7 @@ struct PostCell: View {
                     self.presentComment.toggle()
                 }
                 .sheet(isPresented: $presentComment) {
-                    CommentInputView(post: post)
+                    CommentInputView(post: post).environmentObject(self.userData)
                 }
                 
                 Spacer()
