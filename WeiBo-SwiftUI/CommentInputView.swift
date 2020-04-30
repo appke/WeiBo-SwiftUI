@@ -13,6 +13,7 @@ struct CommentInputView: View {
     let post: Post
     
     @State private var text: String = ""
+    @State private var showEmptyTextHUD: Bool = false
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -36,6 +37,14 @@ struct CommentInputView: View {
                     Spacer()
                     
                     Button(action: {
+                        if self.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                            self.showEmptyTextHUD = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                self.showEmptyTextHUD = false
+                            }
+                            return
+                        }
+                        
                         //print("Send")
                         print(self.text)
                         
@@ -53,6 +62,13 @@ struct CommentInputView: View {
                 .font(.system(size: 18))
                 .foregroundColor(.black)
             }
+            .overlay(
+                Text("评论不能为空")
+                    .scaleEffect(showEmptyTextHUD ? 1 : 0.5)
+                    .animation(.spring(dampingFraction: 0.5))
+                    .opacity(showEmptyTextHUD ? 1 : 0)
+                    .animation(.easeInOut)
+            )
             .padding(.bottom, keyboardResponder.keyboardHeight)
             .edgesIgnoringSafeArea(keyboardResponder.keyboardShow ? .bottom : [])
         }
