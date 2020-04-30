@@ -29,7 +29,6 @@ struct CommentTextView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UITextView, context: Context) {
-        
     }
     
     class Coordinator: NSObject, UITextViewDelegate {
@@ -39,6 +38,7 @@ struct CommentTextView: UIViewRepresentable {
         
         // 文本发生变化时
         func textViewDidChange(_ textView: UITextView) {
+            // 让外部知道textView 输入的值
             parent.text = textView.text
         }
     }

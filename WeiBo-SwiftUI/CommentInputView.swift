@@ -8,13 +8,17 @@
 
 import SwiftUI
 
+/// 评论输入页
 struct CommentInputView: View {
     let post: Post
     
     @State private var text: String = ""
     
     @Environment(\.presentationMode) var presentationMode
+    
     @EnvironmentObject var userData: UserData
+    
+    @ObservedObject private var keyboardResponder = KeyboardResponder()
     
     var body: some View {
         
@@ -49,6 +53,8 @@ struct CommentInputView: View {
                 .font(.system(size: 18))
                 .foregroundColor(.black)
             }
+            .padding(.bottom, keyboardResponder.keyboardHeight)
+            .edgesIgnoringSafeArea(keyboardResponder.keyboardShow ? .bottom : [])
         }
         
 }
