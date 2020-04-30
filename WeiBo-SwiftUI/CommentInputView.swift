@@ -23,7 +23,7 @@ struct CommentInputView: View {
     var body: some View {
         
         VStack(spacing: 0) {
-            CommentTextView(text: $text)
+            CommentTextView(text: $text, beginEdittingOnAppear: true)
             
             HStack {
                     Button(action: {
