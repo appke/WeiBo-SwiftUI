@@ -10,6 +10,7 @@ import SwiftUI
 
 struct PostCell: View {
     let post: Post //外部传进来的
+    @State var presentComment: Bool = false
     
     var bindingPost: Post {
         userData.post(forId: post.id)!
@@ -79,7 +80,12 @@ struct PostCell: View {
                                       text: post.commentCountText,
                                       color: .black)
                 {
-                    print("message Click")
+                    //print("message Click")
+                    //self.presentComment = true
+                    self.presentComment.toggle()
+                }
+                .sheet(isPresented: $presentComment) {
+                    CommentInputView(post: post)
                 }
                 
                 Spacer()
