@@ -43,6 +43,7 @@ struct HomeView: View {
             .navigationBarItems(leading: HomeNavigationBar(leftPercent: $leftPercent))
             .navigationBarTitle("首页", displayMode: .inline)
         }
+//    .navigationViewStyle(StackNavigationViewStyle)
     }
 }
 
