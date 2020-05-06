@@ -10,6 +10,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State var leftPercent: CGFloat = 0
+    @EnvironmentObject var userData :UserData
     
     init() {
         UITableView.appearance().separatorStyle = .none
@@ -26,8 +27,10 @@ struct HomeView: View {
                     HStack(spacing: 0) {
                         PostListView(category: .recommend)
                             .frame(width: UIScreen.main.bounds.width)
+                            .environmentObject(self.userData)
                         PostListView(category: .hot)
                             .frame(width: UIScreen.main.bounds.width)
+                            .environmentObject(self.userData)
                     }
                 }
             }
@@ -43,7 +46,7 @@ struct HomeView: View {
             .navigationBarItems(leading: HomeNavigationBar(leftPercent: $leftPercent))
             .navigationBarTitle("首页", displayMode: .inline)
         }
-//    .navigationViewStyle(StackNavigationViewStyle)
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
